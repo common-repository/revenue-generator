@@ -1,0 +1,123 @@
+$color-dark: #1d1d1d;
+$background-stroke: #cbd5e0;
+$filled-stroke: #000;
+$text-color: #333;
+$svgHeight: 64px;
+$svgMarginRight: 6px;
+$widget-background-color: #fff;
+$circumference: 2 * 28 * 3.14;
+$stepSize: 18px;
+
+.tab_widget {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.tab_widget__container {
+	position: relative;
+	background-color: $widget-background-color;
+	border-radius: 6px;
+	display: flex;
+	align-items: center;
+	transition: transform 0.5s linear;
+}
+
+.tab_widget__container-visible {
+	transform: translate(0);
+}
+
+.tab_widget__arc-container {
+	margin-right: 6px;
+	width: calc(#{$svgHeight} + #{$svgMarginRight});
+	height: $svgHeight;
+	position: relative;
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.tab_widget__arc--background {
+	position: absolute;
+	stroke: $background-stroke;
+}
+
+.tab_widget__arc--filled {
+	position: absolute;
+	stroke: $filled-stroke;
+	stroke-dasharray: $circumference;
+	stroke-dashoffset: $circumference;
+}
+
+.tab_widget__arc-animation {
+	animation: animateTabAmount 0.5s linear forwards;
+}
+
+.tab_widget__arc-animation--pulse {
+	animation: pulse 1s ease-in-out alternate-reverse infinite;
+}
+
+@keyframes animateTabAmount {
+	to {
+		stroke-dashoffset: var(--strokeDashOffset);
+	}
+}
+
+@keyframes pulse {
+	0% {
+		stroke-opacity: 0.2;
+	}
+
+	100% {
+		transform: scale(1.1);
+	}
+}
+
+.tab_widget__donated-amount-text {
+	font-weight: 700;
+}
+
+.tab_widget__thank-you-message {
+	font-weight: 500;
+	margin: 0;
+	margin-bottom: 5px;
+	font-size: 19px;
+	color: $color-dark;
+	text-align: left;
+}
+
+.tab_widget__regular-text {
+	font-weight: 400;
+	font-size: 15px;
+	margin: 0;
+	margin-bottom: 5px;
+	color: $text-color;
+}
+
+.tab_widget__links-container {
+	display: flex;
+	align-items: center;
+}
+
+.tab_widget__link {
+	font-weight: 400;
+	margin: 0;
+	font-size: 13px;
+	color: $color-dark;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.tab_widget__links-separator {
+	padding: {
+		right: 5px;
+		left: 5px;
+	}
+	color: $text-color;
+}
+
+.tab_widget__container-hidden {
+	transform: translate(500px);
+}

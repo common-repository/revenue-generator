@@ -1,0 +1,70 @@
+/*
+ * Overriding is necessary, as the upstream adds styles with !important,
+ * and we have to add more specificity to overcome that.
+ */
+/* stylelint-disable declaration-no-important */
+div.lpc-s69,
+div.lpc-s68 {
+	.lpc-s65 {
+		.lpc-s64 {
+			min-height: 730px !important;
+
+			.lpc-s25 {
+
+				.lpc-s36 {
+					display: flex;
+					justify-content: center;
+
+					a {
+						display: flex;
+						align-self: center;
+					}
+				}
+
+				.lpc-s28 {
+					display: flex;
+					flex-direction: column;
+					background: transparent !important;
+					box-shadow: unset !important;
+
+					.lpc-s38 {
+						div.lpc-s12 {
+							table.lpc-s0 {
+								tbody {
+									display: flex !important;
+									flex-direction: column !important;
+
+									tr.lpc-s2 {
+										width: 100% !important;
+										margin: 5px 0;
+										cursor: pointer !important;
+										background-color: #fff !important;
+										border: 2px solid #2e2e2e !important;
+										border-radius: 5px !important;
+
+										td.lpc-s3 {
+											width: 15% !important;
+										}
+
+										td.lpc-s5 {
+											width: 60% !important;
+										}
+
+										td.lpc-s9 {
+											width: 25% !important;
+										}
+									}
+								}
+							}
+						}
+					}
+
+					.lpc-s29 {
+						background: transparent !important;
+					}
+				}
+			}
+		}
+	}
+}
+/* stylelint-enable declaration-no-important */

@@ -1,0 +1,57 @@
+html.rev-gen-preview {
+	margin: 0 !important; /* stylelint-disable-line declaration-no-important */
+	padding: 0 !important; /* stylelint-disable-line declaration-no-important */
+}
+
+body {
+	background-color: #a0a0a01f !important; /* stylelint-disable-line declaration-no-important */
+}
+
+main {
+	display: flex !important; /* stylelint-disable-line declaration-no-important */
+	width: 100%;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+
+.rev-gen-preview {
+	.rev-gen-contribution-main--box-donation:hover {
+		cursor: default;
+		background: #fff;
+		color: #1d1d1d;
+	}
+	*[contenteditable="true"] {
+		cursor: text;
+		&:not(button):focus {
+			border-radius: 10px;
+			outline: 2px solid #1d1d1d;
+		}
+	}
+	&__section {
+		margin-bottom: 100px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&-title {
+			font-size: 20px;
+			text-transform: uppercase;
+			box-shadow: none;
+			text-align: center;
+			pointer-events: none;
+			user-select: none;
+		}
+	}
+}
+
+@import "components/shepherd";
+
+.rev-gen-tutorial-card {
+	width: 240px;
+}
+
+.shepherd-target {
+	position: relative;
+	z-index: 999;
+	background-color: #fff;
+}

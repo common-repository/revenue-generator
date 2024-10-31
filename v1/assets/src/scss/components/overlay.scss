@@ -1,0 +1,597 @@
+// Purchase overlay and its elements.
+.rg-purchase-overlay {
+	position: absolute;
+	top: 25%;
+	z-index: 999;
+	text-align: center;
+	letter-spacing: 0;
+	margin: 0 20%;
+	color: initial;
+	line-height: initial;
+	width: 60%;
+	display: none;
+
+	&-highlight {
+		position: absolute;
+		top: -3px;
+		left: -3px;
+		border: 3px solid #000;
+		width: 100%;
+		height: 100%;
+		border-radius: 5px;
+		box-shadow: 0 0 0 2px rgba(197, 197, 197, 0.8);
+		display: none;
+		z-index: -5;
+	}
+
+	&-info {
+		margin-bottom: 10px;
+	}
+
+	&-title {
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 1;
+		color: #1b0e20;
+		margin-bottom: 20px;
+	}
+
+	&-description {
+		font-size: 16px;
+		line-height: 25px;
+		color: #2e2e2e;
+		opacity: 0.8;
+	}
+
+	&-purchase-options {
+		display: flex;
+		flex-direction: column;
+
+		&-item {
+			background-color: #fff;
+			border: 2px solid #2e2e2e;
+			border-radius: 5px;
+			display: flex;
+			padding: 21px 0 21px 11px;
+			text-align: left;
+			margin: 5px 0;
+			cursor: pointer;
+			transition: opacity 0.2s;
+			width: 392px;
+			align-self: center;
+			position: relative;
+			box-sizing: border-box;
+
+			&-actions {
+				display: flex;
+				flex-direction: column;
+				position: absolute;
+				left: -40px;
+				top: 0;
+
+				button {
+					background: transparent;
+					border: 0;
+					padding: 0;
+					width: 40px;
+					cursor: pointer;
+
+					&:focus,
+					&:active {
+						border: unset;
+						color: unset;
+						box-shadow: unset;
+					}
+
+					img {
+						height: 25px;
+						width: 25px;
+					}
+				}
+			}
+
+			&-info {
+				padding-left: 2px;
+				padding-right: 1em;
+				flex: 2;
+
+				&-title {
+					font-size: 18px;
+					font-weight: 400;
+					margin-bottom: 4px;
+					color: #222;
+					cursor: auto;
+					font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+				}
+
+				&-description {
+					font-size: 14px;
+					color: #666;
+					cursor: auto;
+					font-weight: 400;
+					font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+				}
+			}
+
+			&-price {
+				font-size: 17px;
+				font-weight: 600;
+				flex: 1;
+				display: flex;
+				flex-flow: column;
+				align-self: center;
+				color: #2e2e2e;
+				cursor: auto;
+				flex-direction: row;
+				justify-content: center;
+				margin-left: 5px;
+				position: relative;
+
+				span {
+					text-align: center;
+					font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+					font-size: 28px;
+					font-weight: 400;
+					font-stretch: normal;
+					font-style: normal;
+					line-height: normal;
+					letter-spacing: normal;
+
+					sup {
+						font-size: 12px;
+						text-transform: uppercase;
+						margin-left: 4px;
+						position: relative;
+						top: -10px;
+					}
+				}
+
+				&-icon {
+					display: none;
+					background: transparent;
+					border: 0;
+					cursor: pointer;
+					position: absolute;
+					right: 0;
+					top: 5px;
+
+					&:focus {
+						box-shadow: none;
+						outline: unset;
+					}
+				}
+			}
+
+			&-highlight {
+				position: absolute;
+				border: solid #000 3px;
+				width: 100%;
+				left: -3px;
+				height: 100%;
+				top: -3px;
+				display: none;
+				border-radius: 5px;
+				box-shadow: 0 0 0 2px rgba(197, 197, 197, 0.8);
+				z-index: -5;
+			}
+		}
+	}
+
+	&-option-manager {
+		position: absolute;
+		top: -15px;
+		border: 2px solid;
+		left: -365px;
+		width: 320px;
+		background: #fff;
+		font-weight: bold;
+		font-family: HelveticaNeue, serif;
+
+		&::after,
+		&::before {
+			left: 100%;
+			top: 25%;
+			border: solid transparent;
+			content: " ";
+			position: absolute;
+			pointer-events: none;
+		}
+
+		&::after {
+			border-color: transparent;
+			border-left-color: #fff;
+			border-width: 8px;
+			margin-top: -28px;
+		}
+
+		&::before {
+			border-color: transparent;
+			border-left-color: #000;
+			border-width: 10px;
+			margin-top: -30px;
+		}
+
+		div {
+			border: 0;
+			border-color: #e3e4e6;
+			border-bottom: 1px solid;
+			height: 45px;
+			text-align: left;
+			display: flex;
+			flex-flow: row nowrap;
+			align-items: center;
+			width: 95%;
+			overflow: hidden;
+			padding-left: 5%;
+			font-family: HelveticaNeue, serif;
+			font-size: 14px;
+			font-weight: bold;
+			font-stretch: normal;
+			font-style: normal;
+			line-height: normal;
+			letter-spacing: normal;
+
+			span.unchecked {
+				font-weight: 500;
+			}
+
+			span {
+				display: table-cell;
+				vertical-align: middle;
+			}
+
+			span.select2,
+			span.select2 span {
+				display: block;
+			}
+
+			button {
+				cursor: pointer;
+			}
+		}
+
+		div.rg-purchase-overlay-option-manager-entity-selection {
+			width: 320px;
+			padding-left: 0;
+			.select2 {
+				min-width: 320px;
+				font-size: 14px;
+				border-bottom: 0;
+				.select2-selection {
+					display: block;
+				}
+				.select2-selection--single .select2-selection__arrow {
+					right: 6px;
+				}
+				.select2-selection__rendered {
+					padding-left: 15px;
+				}
+				&-results {
+					display: block;
+				}
+			}
+			.select2-container--open {
+				display: block;
+				left: 0 !important; /* stylelint-disable-line declaration-no-important */
+				.select2-selection__arrow {
+					right: 10px !important; /* stylelint-disable-line declaration-no-important */
+				}
+				.select2-dropdown {
+					display: block;
+					left: -2px;
+					min-width: 324px !important; /* stylelint-disable-line declaration-no-important */
+					margin-top: 7px;
+					font-weight: normal;
+					font-size: 14px;
+				}
+				.select2-results__option {
+					margin-bottom: 0;
+					padding-top: 17px;
+					padding-left: 18px;
+					padding-bottom: 17px;
+					font-size: 13px;
+					border-bottom: 1px solid rgba(227, 228, 230, 0.1);
+					&[aria-selected="true"]::after {
+						width: 16px;
+						height: 16px;
+					}
+				}
+			}
+			select {
+				border: 0;
+				width: 100%;
+				height: 100%;
+				display: table-cell;
+				vertical-align: middle;
+				margin: 0;
+				background: #fff url(../img/select-down.svg) no-repeat right 15px top 55%;
+				background-size: 13px 13px;
+				padding-left: 0;
+
+				&:focus {
+					border: unset;
+					color: unset;
+					box-shadow: unset;
+				}
+			}
+		}
+
+		div.rg-purchase-overlay-option-manager-pricing,
+		div.rg-purchase-overlay-option-manager-revenue {
+			input[type="checkbox"] + .slider {
+				background-color: #1e1e1e;
+			}
+
+			input[type="checkbox"] {
+				position: absolute;
+				opacity: 0;
+				width: 0;
+				height: 0;
+
+				&:checked + .slider::before {
+					transform: translateX(15px);
+				}
+
+			}
+
+			.switch {
+				display: flex;
+				align-items: center;
+				position: relative;
+				margin: 0 15px 0 10px;
+				height: 20px;
+
+				.slider {
+					cursor: pointer;
+					background-color: #ccc;
+					transition: 0.4s;
+					width: 29px;
+					height: 16px;
+					border-radius: 8px;
+
+					&::before {
+						position: absolute;
+						content: "";
+						left: 1px;
+						top: 4px;
+						background-color: #fff;
+						transition: 0.4s;
+						width: 12px;
+						height: 12px;
+						border-radius: 12px;
+					}
+				}
+			}
+
+			span {
+				color: #1e1e1e;
+				text-align: left;
+			}
+
+			span.align-text {
+				text-align: left;
+			}
+
+			button {
+				background: transparent;
+				border: 0;
+				float: right;
+				height: 100%;
+				padding-right: 15px;
+				cursor: pointer;
+
+				img {
+					width: 20px;
+				}
+			}
+		}
+
+		div.rg-purchase-overlay-option-manager-action {
+			border-bottom: 0;
+
+			button {
+				width: 100%;
+				height: 100%;
+				background: transparent;
+				cursor: pointer;
+				text-align: left;
+				padding-left: 0;
+				border: 0;
+			}
+		}
+
+		button.rg-purchase-overlay-option-remove {
+			text-transform: uppercase;
+		}
+
+		&-duration {
+			.select2 {
+				margin-right: 10px;
+				font-weight: normal;
+			}
+			.select2-dropdown {
+				margin-top: 5px;
+				font-weight: normal;
+			}
+			select {
+				border-radius: 0;
+				border-color: #e3e4e6;
+				height: 100%;
+				background: #fff url(../img/select-down.svg) no-repeat right 5px top 55%;
+				background-size: 13px 13px;
+				padding: 0 0 0 8px;
+				font-family: HelveticaNeue, serif;
+				font-size: 14px;
+				font-weight: 500;
+				font-stretch: normal;
+				font-style: normal;
+				line-height: normal;
+				letter-spacing: normal;
+
+				&:focus {
+					border: unset;
+					color: unset;
+					box-shadow: unset;
+				}
+			}
+
+			&-count {
+				border: 0;
+				width: 15%;
+				border-right: 1px solid;
+			}
+
+			&-period {
+				border: 0;
+				width: 80%;
+			}
+		}
+
+		&-subscription {
+			height: 55px !important; /* stylelint-disable-line declaration-no-important */
+		}
+	}
+
+	&-privacy {
+		color: #333;
+		opacity: 0.5;
+		font-size: 13px;
+		line-height: 20px;
+		font-style: italic;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+
+		a {
+			color: inherit;
+			text-decoration: underline;
+		}
+	}
+
+	&-already-bought {
+		color: #2e2e2e;
+		opacity: 0.8;
+		font-size: 15px;
+		line-height: 26px;
+		text-decoration: underline;
+		display: block;
+		margin-top: 8px;
+	}
+
+	&-option-area {
+		height: 50px;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		opacity: 0.5;
+		&:hover {
+			opacity: 1;
+		}
+		&-add-option {
+			display: flex;
+			margin-top: 10px;
+			button {
+				background: transparent;
+				border: 0;
+			}
+
+			hr {
+				border: 0;
+				border-bottom: 2px solid #000;
+				width: 150px;
+				align-self: center;
+				margin: 0 10px;
+			}
+
+			span {
+				align-self: center;
+			}
+		}
+	}
+	.rev-gen-powered-by-footer {
+		color: #2e2e2e;
+		opacity: 0.4;
+		font-size: 13px;
+		line-height: 1;
+		margin: 0;
+		position: relative;
+		bottom: 0;
+		img {
+			position: relative;
+			top: -2px;
+			max-width: 90px;
+			vertical-align: middle;
+		}
+	}
+
+	&-remove {
+		display: none;
+		background: transparent;
+		border: 0;
+		position: absolute;
+		left: -35px;
+		top: -5px;
+		cursor: pointer;
+	}
+
+}
+
+.border-blur-after {
+	&::after {
+		border-left-color: #a9a9a9;
+	}
+}
+
+@media (max-width: 1279px) {
+	.rg-purchase-overlay {
+		&-option-manager {
+			top: -45px;
+			left: -260px;
+			width: 210px;
+			&::before,
+			&::after {
+				top: 40%;
+			}
+
+			div.rg-purchase-overlay-option-manager-entity-selection {
+				width: 210px;
+				select,
+				.select2 {
+					min-width: 210px;
+					width: 210px;
+					font-size: 10px;
+				}
+				.select2-container--open .select2-dropdown {
+					min-width: 214px !important; /* stylelint-disable-line declaration-no-important */
+					.select2-results__option {
+						font-size: 10px;
+					}
+				}
+			}
+
+			div,
+			.select2 {
+				font-size: 10px;
+			}
+
+			&-duration {
+
+				&-count {
+					width: 45px;
+				}
+
+				&-period {
+					width: 75%;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1440px) {
+	.rg-purchase-overlay {
+		&-option-manager {
+			top: -40px;
+		}
+	}
+}

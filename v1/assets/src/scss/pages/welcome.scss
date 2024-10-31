@@ -1,0 +1,240 @@
+@import "../components/card";
+
+// Main welcome screen.
+.rev-gen-welcome {
+	display: flex;
+	flex-flow: column;
+	max-width: 880px;
+	margin: 75px auto 0;
+	align-items: center;
+	justify-content: space-between;
+
+	@media screen and (min-width: 850px) {
+		align-items: flex-start;
+		flex-flow: row;
+	}
+
+	&__left {
+		flex: 1;
+	}
+
+	&__title {
+		line-height: 1.15;
+		font-size: 3.18em;
+		color: #1d1d1d;
+	}
+
+	p {
+		max-width: 450px;
+		font-size: 1.16em;
+		color: #333;
+	}
+
+	&__buttons {
+		margin-top: 30px;
+		@media screen and (min-width: 850px) {
+			align-self: flex-end;
+			margin-top: 0;
+			margin-bottom: 30px;
+		}
+		.rev-gen-welcome__title {
+			font-size: 1.5em;
+			text-align: center;
+			color: #333;
+		}
+		.rev-gen-card {
+			margin-right: 25px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		&-wrap {
+			display: flex;
+			flex-flow: row nowrap;
+			margin-top: 30px;
+		}
+	}
+
+	&__buttons {
+		min-width: 300px;
+		margin-top: 30px;
+		@media screen and (min-width: 850px) {
+			align-self: flex-end;
+			margin-top: 0;
+			margin-bottom: 30px;
+		}
+		.rgv2-welcome__title {
+			font-size: 1.5em;
+			text-align: center;
+			color: #333;
+		}
+		.rgv2-card {
+			margin-right: 25px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		&-wrap {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: center;
+			margin-top: 30px;
+			&--column {
+				flex-flow: column nowrap;
+			}
+		}
+	}
+
+	label {
+		position: relative;
+		font-size: 0.9em;
+
+		input[type="checkbox"] {
+			&:checked,
+			&:focus {
+				outline: 0;
+				box-shadow: none;
+				border: 2px solid #333;
+			}
+			&:checked {
+				&::before {
+					content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMi42NTIiIGhlaWdodD0iOC43NzgiIHZpZXdCb3g9IjAgMCAxMi42NTIgOC43NzgiPjxkZWZzPjxzdHlsZT4uYXtmaWxsOm5vbmU7c3Ryb2tlOiMzMzM7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS13aWR0aDoycHg7fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGNsYXNzPSJhIiBkPSJNMSw3LjA3MWw0LjE2Nyw0LjE2Nyw3LjA3MS03LjA3MSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTAuMjkzIC0zLjQ2KSIvPjwvc3ZnPg==);
+					width: 90%;
+					margin: 8px 0 0 0;
+					@media screen and (min-width: 850px) {
+						margin: 1px 0 0 0;
+					}
+				}
+			}
+		}
+	}
+
+	.welcome-screen-question {
+		&--sub-heading {
+			font-size: 18px;
+			margin: 0;
+		}
+
+		&--description {
+			font-size: 15px;
+			color: #333;
+			margin: 0;
+		}
+		&-paywall {
+			margin: 65px 0;
+		}
+	}
+
+	.welcome-screen-publish-questionnaire {
+		width: 50%;
+		text-align: center;
+		margin: 20px auto 40px;
+
+		&--heading {
+			font-size: 15px;
+			font-weight: 600;
+		}
+		&--description {
+			margin-bottom: 0;
+		}
+		&-paywall {
+			margin-bottom: 40px;
+			width: 100%;
+		}
+	}
+
+	&--card {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__list {
+		list-style-type: disc;
+		max-width: 450px;
+		margin-left: 15px;
+		line-height: 1.35;
+		font-size: 1.16em;
+		color: #333;
+	}
+
+	a {
+		color: #000;
+		text-decoration: underline;
+	}
+
+	&__connect {
+		display: none;
+		flex-flow: column wrap;
+		align-items: center;
+		margin-top: 50px;
+		&.show {
+			display: flex;
+		}
+		input {
+			border: 0;
+			border-bottom: 2px solid #333;
+			border-radius: 0;
+			margin-bottom: 30px;
+			text-align: left;
+			width: 100%;
+			padding: 0;
+			font-size: 16px;
+			&:focus {
+				outline: 0;
+				box-shadow: none;
+			}
+		}
+		button {
+			width: 100%;
+			padding: 12px 0;
+			border-radius: 6px;
+			&:disabled {
+				background-color: #a9a9a9;
+			}
+		}
+	}
+
+	&__connect-buttons {
+		.rev-gen__button {
+			cursor: pointer;
+			margin-bottom: 20px;
+			padding: 12px 0;
+			border-radius: 6px;
+			text-align: center;
+			text-decoration: none;
+		}
+	}
+}
+
+.rgv2-welcome {
+	.rev-gen-welcome__buttons {
+		min-width: 300px;
+		margin-top: 30px;
+		@media screen and (min-width: 850px) {
+			align-self: center;
+			margin-top: 0;
+			margin-bottom: 30px;
+		}
+		.rgv2-welcome__title {
+			font-size: 1.5em;
+			text-align: center;
+			color: #333;
+		}
+		.rgv2-card {
+			margin-right: 25px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		&-wrap {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: center;
+			margin-top: 30px;
+			&--column {
+				flex-flow: column nowrap;
+			}
+		}
+	}
+}

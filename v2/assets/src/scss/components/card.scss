@@ -1,0 +1,25 @@
+// Welcome card styling.
+.rev-gen-card {
+	border-radius: 4px;
+	background-color: #fff;
+	border: 2px solid #1d1d1d;
+	box-sizing: border-box;
+	position: relative;
+	width: 190px;
+	padding: 25px 0;
+	cursor: pointer;
+	text-align: center;
+
+	&__title {
+		margin: 0;
+		font-family: HelveticaNeue, serif;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 1.16em;
+		text-align: center;
+		color: #1d1d1d;
+		b {
+			font-weight: bold;
+		}
+	}
+}

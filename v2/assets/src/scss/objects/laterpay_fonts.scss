@@ -1,0 +1,29 @@
+// Internally used fonts.
+@font-face {
+	font-family: "LaterPay WorkSans";
+	src: url(../fonts/WorkSans-SemiBold.ttf);
+}
+
+@font-face {
+	font-family: HelveticaNeue;
+	src: local("Helvetica Neue"), url(../fonts/HelveticaNeue.ttf);
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	font-family: HelveticaNeue;
+	src: local("Helvetica Neue Medium"), url(../fonts/HelveticaNeueMedium.ttf);
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	font-family: HelveticaNeue;
+	src: local("Helvetica Neue Bold"), url(../fonts/HelveticaNeueBold.ttf);
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+}

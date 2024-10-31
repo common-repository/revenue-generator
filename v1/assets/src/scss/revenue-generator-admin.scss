@@ -1,0 +1,39 @@
+@import "objects/laterpay_fonts";
+@import "./pages/post-preview";
+
+/* stylelint-disable declaration-no-important */
+i.mce-i-cto-logo,
+#adminmenu div.wp-menu-image.dashicons-cto-logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+i.mce-i-cto-logo::before,
+#adminmenu div.wp-menu-image.dashicons-cto-logo::before { // WordPress selector
+	content: "";
+	width: 22px;
+	height: 17px;
+	margin: 5px 0 0 2px;
+	padding: 0;
+	background: url(../img/lp-logo-icon-white.svg);
+	background-size: contain;
+}
+/* stylelint-enable declaration-no-important */
+
+.rev-gen-footer {
+	position: fixed;
+	bottom: 10px;
+	z-index: -1;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	color: #808080;
+	span {
+		display: inline-block;
+		margin-right: 5px;
+	}
+	img {
+		width: 80px;
+		vertical-align: middle;
+	}
+}

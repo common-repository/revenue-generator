@@ -1,0 +1,102 @@
+@import "objects/laterpay_fonts";
+@import "./pages/settings";
+
+.rev-gen-layout-wrapper {
+	width: 100%;
+	color: #1d1d1d;
+	font-family: HelveticaNeue, serif;
+	min-height: 750px;
+
+	button,
+	a {
+		&:focus {
+			outline: 0;
+			box-shadow: none;
+		}
+	}
+}
+
+/* stylelint-disable declaration-no-important */
+i.mce-i-cto-logo,
+#adminmenu div.wp-menu-image.dashicons-cto-logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+i.mce-i-cto-logo::before,
+#adminmenu div.wp-menu-image.dashicons-cto-logo::before { // WordPress selector
+	content: "";
+	width: 22px;
+	height: 17px;
+	margin: 5px 0 0 2px;
+	padding: 0;
+	background: url(../img/lp-logo-icon-white.svg);
+	background-size: contain;
+}
+/* stylelint-enable declaration-no-important */
+
+#adminmenu #toplevel_page_revenue-generator li:nth-child(3) { /* stylelint-disable-line selector-id-pattern */
+	display: none;
+}
+
+body.toplevel_page_revenue-generator {
+	background-color: #fff;
+
+	#wpcontent {
+		padding-left: 0;
+		padding-bottom: 0;
+	}
+
+	#wpfooter {
+		display: none;
+	}
+}
+
+#rev-gen-react-app {
+	color: #1d1d1d;
+}
+
+.laterpay-loader-wrapper {
+	width: 100%;
+	height: 100%;
+	display: none;
+	justify-content: center;
+	position: fixed;
+	z-index: 1000;
+	backdrop-filter: blur(5px);
+	top: 0;
+	img {
+		width: 150px;
+		position: absolute;
+		top: 40%;
+		animation: breathing 2s ease-out infinite normal;
+		left: 40%;
+		transform: translate(-50%, 0);
+	}
+}
+
+@keyframes breathing {
+	0% {
+		-webkit-transform: scale(0.9);
+		-ms-transform: scale(0.9);
+		transform: scale(0.9);
+	}
+
+	25% {
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+	}
+
+	60% {
+		-webkit-transform: scale(0.9);
+		-ms-transform: scale(0.9);
+		transform: scale(0.9);
+	}
+
+	100% {
+		-webkit-transform: scale(0.9);
+		-ms-transform: scale(0.9);
+		transform: scale(0.9);
+	}
+}

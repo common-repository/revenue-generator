@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.js": "/wp-content/plugins/revenue-generator/v2/builder-react-app/build/static/js/main.4ec904d6.chunk.js",
+    "main.js.map": "/wp-content/plugins/revenue-generator/v2/builder-react-app/build/static/js/main.4ec904d6.chunk.js.map",
+    "runtime-main.js": "/wp-content/plugins/revenue-generator/v2/builder-react-app/build/static/js/runtime-main.4047daa3.js",
+    "runtime-main.js.map": "/wp-content/plugins/revenue-generator/v2/builder-react-app/build/static/js/runtime-main.4047daa3.js.map",
+    "static/js/2.495fad01.chunk.js": "/wp-content/plugins/revenue-generator/v2/builder-react-app/build/static/js/2.495fad01.chunk.js",
+    "static/js/2.495fad01.chunk.js.map": "/wp-content/plugins/revenue-generator/v2/builder-react-app/build/static/js/2.495fad01.chunk.js.map",
+    "index.html": "/wp-content/plugins/revenue-generator/v2/builder-react-app/build/index.html",
+    "static/js/2.495fad01.chunk.js.LICENSE.txt": "/wp-content/plugins/revenue-generator/v2/builder-react-app/build/static/js/2.495fad01.chunk.js.LICENSE.txt",
+    "static/media/bar.f21ca388.png": "/wp-content/plugins/revenue-generator/v2/builder-react-app/build/static/media/bar.f21ca388.png",
+    "static/media/box.0b5ad8d5.png": "/wp-content/plugins/revenue-generator/v2/builder-react-app/build/static/media/box.0b5ad8d5.png",
+    "static/media/button.2a5ff0ab.png": "/wp-content/plugins/revenue-generator/v2/builder-react-app/build/static/media/button.2a5ff0ab.png",
+    "static/media/check-icon.a34cc644.svg": "/wp-content/plugins/revenue-generator/v2/builder-react-app/build/static/media/check-icon.a34cc644.svg",
+    "static/media/contributeto-logo.6cce8a71.svg": "/wp-content/plugins/revenue-generator/v2/builder-react-app/build/static/media/contributeto-logo.6cce8a71.svg",
+    "static/media/contribution-icon.48069fc0.svg": "/wp-content/plugins/revenue-generator/v2/builder-react-app/build/static/media/contribution-icon.48069fc0.svg",
+    "static/media/footer.9a99b8d9.png": "/wp-content/plugins/revenue-generator/v2/builder-react-app/build/static/media/footer.9a99b8d9.png",
+    "static/media/loader.f3a922bf.svg": "/wp-content/plugins/revenue-generator/v2/builder-react-app/build/static/media/loader.f3a922bf.svg",
+    "static/media/search-icon.fe5a600c.svg": "/wp-content/plugins/revenue-generator/v2/builder-react-app/build/static/media/search-icon.fe5a600c.svg",
+    "static/media/toggle.f7ca2fff.svg": "/wp-content/plugins/revenue-generator/v2/builder-react-app/build/static/media/toggle.f7ca2fff.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4047daa3.js",
+    "static/js/2.495fad01.chunk.js",
+    "static/js/main.4ec904d6.chunk.js"
+  ]
+}

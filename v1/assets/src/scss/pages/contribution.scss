@@ -1,0 +1,653 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Apr 28, 2020, 9:29:10 PM
+    Author     : milind
+*/
+
+$box-text-color:#1d1d1d;
+$box-dark-grey:#333;
+$box-font-helvetica: HelveticaNeue, serif;
+$box-font-worksans:"LaterPay WorkSans", serif;
+$box-white:#fff;
+
+body.revenue-generator_page_revenue-generator-contribution {
+	background-color: #fff;
+	#wpcontent {
+		padding-left: 0;
+	}
+	.wrap {
+		margin: 0;
+	}
+}
+.amount-text {
+	font-family: $box-font-worksans;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.21;
+	text-align: center;
+	color: $box-dark-grey;
+}
+.rev-gen-contribution-main {
+	width: 380px;
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+	margin-top: 70px;
+	padding: 20px;
+
+	&--header {
+		font-family: $box-font-helvetica;
+		font-size: 24px;
+		font-weight: 500;
+		line-height: 1.21;
+		letter-spacing: normal;
+		color: $box-text-color;
+		margin-bottom: 32px;
+	}
+	&--box {
+		width: calc(100% - 50px);
+		min-height: 200px;
+		border-radius: 5px;
+		box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+		background-color: $box-white;
+		padding: 30px 25px 18px;
+		position: relative;
+
+		&-header {
+			min-height: 24px;
+			font-family: $box-font-helvetica;
+			font-size: 18px;
+			font-weight: 500;
+			line-height: 1.33;
+			letter-spacing: -0.09px;
+			text-align: center;
+			color: $box-text-color;
+			border: 1px solid transparent;
+			display: inline-block;
+			min-width: 80%;
+		}
+		&-description {
+			min-height: 17px;
+			font-family: $box-font-helvetica;
+			font-size: 14px;
+			font-weight: 500;
+			letter-spacing: -0.07px;
+			text-align: center;
+			color: $box-dark-grey;
+			border: 1px solid transparent;
+			display: inline-block;
+			min-width: 80%;
+		}
+
+		&-donation {
+			border: solid 2px $box-text-color;
+			float: left;
+			border-radius: 5px;
+			margin: 0 2px;
+			height: 42px;
+			width: 72px;
+			display: flex;
+			align-items: center;
+			text-align: center;
+			justify-content: center;
+			overflow: hidden;
+			word-break: normal;
+
+			&-wrapper {
+				position: relative;
+				display: flex;
+				justify-content: center;
+			}
+
+			&-currency {
+				@extend .amount-text;
+			}
+
+			&-amount {
+				@extend .amount-text;
+			}
+
+		}
+
+		&-footer-logo {
+			position: relative;
+			bottom: 0;
+			width: 100%;
+			margin-top: 37px;
+		}
+
+		&__footer {
+			position: relative;
+			bottom: 0;
+			z-index: 1;
+			img {
+				position: relative;
+				top: -1px;
+				max-width: 90px;
+				vertical-align: middle;
+			}
+		}
+
+		&.faded {
+			background-color: #a9a9a9;
+		}
+	}
+
+	&-inputs-wrapper {
+		margin: 32px auto;
+		width: 415px;
+	}
+	&-input-label {
+		font-family: $box-font-helvetica;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 1.21;
+		text-align: left;
+		color: $box-text-color;
+		width: 92%;
+		position: relative;
+		display: block;
+		border-radius: 5px;
+		padding: 16px 30px 16px 16px;
+	}
+	&-input {
+		width: 100%;
+		display: block;
+		margin-top: 5px;
+		border: solid 1px #ddd;
+		background-color: $box-white;
+	}
+
+	&-generate-button {
+		background-color: #8a8a8a;
+		color: $box-white;
+		width: 100%;
+		height: 32px;
+		border-radius: 5px;
+		font-family: $box-font-helvetica;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 0.79;
+		letter-spacing: normal;
+		border: 0;
+		&:disabled {
+			background: transparent;
+			color: $box-text-color;
+			border: 2px solid $box-text-color;
+		}
+		&.enabled {
+			background-color: $box-text-color;
+			color: $box-white;
+		}
+	}
+
+	&--help {
+		position: absolute;
+		top: 39px;
+		right: 0;
+		cursor: pointer;
+
+		&-button {
+			position: absolute;
+			top: 48px;
+			right: -8px;
+			height: 20px;
+			width: 20px;
+			img {
+				height: 20px;
+				width: 20px;
+			}
+		}
+	}
+
+	&--shortcode {
+		position: absolute;
+		top: 19px;
+		right: 0;
+	}
+
+	&-info-modal {
+		width: 392px;
+		left: -2%;
+		top: 15%;
+		height: auto;
+		position: absolute;
+		transform: translate(0, 0);
+		margin: auto;
+		&-cross {
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			font-weight: 700;
+			font-size: 15px;
+			color: #a9a9a9;
+			cursor: pointer;
+		}
+	}
+
+	&-copy-message {
+		font: Italic 13px/17px $box-font-helvetica;
+		letter-spacing: 0;
+		color: $box-text-color;
+		display: none;
+	}
+
+	&-button {
+		padding: 16px 30px 16px 16px;
+		position: relative;
+		margin-top: 15px;
+	}
+
+	&__p {
+		padding: 0 18px;
+		font: 13px/17px $box-font-helvetica;
+		color: $box-text-color;
+	}
+
+}
+
+.amount-text-dashborad {
+	font-family: $box-font-worksans;
+	font-size: 12px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: $box-dark-grey;
+}
+
+/* Dashboard Styling */
+.rev-gen-dashboard-content-contribution {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	margin-bottom: 20px;
+
+	&-wrapper {
+		margin: 40px 20px;
+	}
+	&--box {
+		position: relative;
+		width: 320px;
+		border-radius: 5px;
+		border: solid 2px $box-text-color;
+		background-color: $box-white;
+		text-align: center;
+		float: left;
+		padding: 25px 25px 20px;
+
+		@media (max-width: 800px) {
+			display: none;
+		}
+
+		&__link {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 5;
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+
+		&-header {
+			width: 100%;
+			margin: 0;
+			font-family: $box-font-helvetica;
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 1.5;
+			letter-spacing: -0.08px;
+			text-align: center;
+			color: $box-text-color;
+			pointer-events: none;
+		}
+		&-description {
+			width: 100%;
+			min-height: 15px;
+			font-family: $box-font-helvetica;
+			font-size: 12px;
+			font-weight: 500;
+			line-height: 1.25;
+			letter-spacing: -0.06px;
+			text-align: center;
+			color: $box-text-color;
+			margin-bottom: 20px;
+			pointer-events: none;
+		}
+
+		&-donation-wrapper {
+			text-align: center;
+			position: relative;
+			display: inline-block;
+			pointer-events: none;
+		}
+
+		&-donation {
+			border: solid 2px $box-text-color;
+			float: left;
+			border-radius: 5px;
+			margin: 0 2px;
+			height: 42px;
+			width: 72px;
+			display: flex;
+			align-items: center;
+			text-align: center;
+			justify-content: center;
+			overflow: hidden;
+			word-break: normal;
+			pointer-events: none;
+
+			&-currency {
+				@extend .amount-text-dashborad;
+			}
+
+			&-amount {
+				@extend .amount-text-dashborad;
+			}
+
+		}
+
+	}
+
+	&--links {
+		a {
+			color: #000;
+			font-weight: bold;
+			text-decoration: underline;
+			text-transform: uppercase;
+		}
+	}
+
+	&--info {
+		position: relative;
+		display: block;
+		float: left;
+		padding: 25px 30px;
+		min-width: 325px;
+		&-title {
+			margin: 0 0 10px 0;
+			font-family: $box-font-helvetica;
+			font-size: 21px;
+			font-weight: 500;
+			line-height: 1.24;
+			letter-spacing: normal;
+			text-align: left;
+			color: $box-text-color;
+		}
+		&-url {
+			font-family: $box-font-helvetica;
+			font-size: 16px;
+			font-weight: normal;
+			line-height: 1.19;
+			letter-spacing: normal;
+			text-align: left;
+			color: $box-text-color;
+			margin: 10px 0;
+		}
+		&-updated {
+			min-height: 20px;
+			opacity: 0.6;
+			font-family: $box-font-helvetica;
+			font-size: 14px;
+			font-weight: normal;
+			line-height: 1.36;
+			letter-spacing: normal;
+			text-align: left;
+			color: $box-text-color;
+			margin: 10px 0;
+		}
+	}
+}
+
+[data-has-help].highlighted {
+	background-color: $box-white;
+}
+
+.rg-contribution {
+	&-builder {
+		display: flex;
+		width: 100%;
+		height: 100vh;
+		flex-flow: row nowrap;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+		background-color: #fff;
+		&__left {
+			flex: 1;
+			max-width: 470px;
+			transition: all 0.2s ease-in;
+		}
+		&__preview {
+			position: relative;
+			flex: 1;
+			iframe {
+				&.loading {
+					opacity: 0.3;
+					transition: opacity 0.2s ease-in;
+				}
+			}
+		}
+		&.preview-focus {
+			.rg-contribution-builder__left {
+				max-width: 80px;
+				transform: translateX(-350px);
+			}
+		}
+		h1.rg-contribution-builder__title {
+			line-height: 1.15;
+			font-weight: bold;
+			font-size: 3.18em;
+			color: #1d1d1d;
+		}
+		&__form {
+			padding: 85px;
+			input[type="submit"].rev-gen__button {
+				width: 100%;
+				margin-top: 30px;
+				padding: 14px 30px;
+				font-size: 1.2em;
+				cursor: pointer;
+				&[disabled="disabled"] {
+					cursor: not-allowed;
+					border-color: transparent;
+					background-color: rgba(0, 0, 0, 0.5);
+					color: #fff;
+				}
+				&.shepherd-target {
+					position: relative;
+					z-index: 999;
+					background-color: #000;
+				}
+			}
+		}
+		&-inputs {
+			margin-top: 50px;
+		}
+		&__input-wrap {
+			input[type="text"] {
+				width: 100%;
+				margin-bottom: 15px;
+				padding: 7px 15px;
+				border: 1px solid transparent;
+				font-size: 1.2em;
+				background-color: #a0a0a01f;
+				&.shepherd-target {
+					position: relative;
+					z-index: 999;
+					background-color: #fff;
+				}
+			}
+		}
+		&__helper-message {
+			display: none;
+		}
+
+		.input-error-text {
+			display: none;
+			margin: -10px 0 10px;
+			padding: 0;
+			font-size: 1.1em;
+			color: #ff1939;
+		}
+
+		input.error {
+			border-color: #ff1939;
+			+ .input-error-text {
+				display: block;
+			}
+		}
+
+		@mixin preview-toggle-arrow() {
+			content: "";
+			display: inline-block;
+			width: 15px;
+			height: 22px;
+			margin-right: 5px;
+			background: url(../img/back-arrow.svg);
+			background-size: 15px 20px;
+			vertical-align: middle;
+		}
+
+		&__preview-toggle {
+			position: absolute;
+			top: 20px;
+			left: 40px;
+			font-weight: bold;
+			color: #1d1d1d;
+			text-transform: uppercase;
+			text-decoration: none;
+			&:hover,
+			&:focus {
+				color: #1d1d1d;
+			}
+			&::before {
+				@include preview-toggle-arrow();
+			}
+			&.mode-collapse {
+				&::before {
+					display: none;
+				}
+				&::after {
+					@include preview-toggle-arrow();
+					height: 18px;
+					margin-right: 0;
+					margin-left: 5px;
+					transform: rotate(180deg);
+				}
+			}
+		}
+
+		&__tour-nav {
+			position: absolute;
+			top: 20px;
+			right: 40px;
+			z-index: 9999;
+		}
+	}
+
+	&-layout-select {
+		margin-top: 30px;
+		&__title {
+			margin-bottom: 30px;
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+			font-weight: bold;
+			font-size: 1.3em;
+		}
+		&__options {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+		}
+		&.shepherd-target {
+			position: relative;
+			padding: 20px;
+			z-index: 999;
+			background-color: #fff;
+		}
+	}
+
+	&-layout-type {
+		&__preview {
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+			height: 100%;
+			opacity: 0.55;
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+			font-weight: bold;
+			font-size: 1.2em;
+			text-align: center;
+			color: #333;
+			transition: opacity 0.1s ease-in;
+		}
+		&__box {
+			width: 70px;
+			height: 50px;
+			margin-bottom: 10px;
+			border: 2px solid #333;
+			border-radius: 6px;
+			&--pill {
+				width: 50px;
+				height: 20px;
+				margin-top: 30%;
+				border-radius: 20px;
+			}
+			&--complex {
+				position: relative;
+				.rg-contribution-layout-type__inner {
+					position: absolute;
+					bottom: 10px;
+					width: 100%;
+					height: 2px;
+					background-color: #333;
+				}
+			}
+		}
+		&__label {
+			display: block;
+			margin-top: auto;
+		}
+		input:checked + .rg-contribution-layout-type__preview {
+			opacity: 1;
+		}
+	}
+}
+
+.rg-tour-nav {
+	display: none;
+	margin: 0;
+	padding: 0;
+	&__item {
+		cursor: default;
+		pointer-events: none;
+		display: inline-block;
+		width: 14px;
+		height: 14px;
+		margin-right: 5px;
+		border: 2px solid rgba(255, 255, 255, 0.6);
+		border-radius: 50%;
+		line-height: 1.5;
+		font-size: 9px;
+		text-decoration: none;
+		text-align: center;
+		color: rgba(255, 255, 255, 0.6);
+		background-color: transparent;
+		&:last-child {
+			margin-right: 0;
+		}
+		&.active {
+			font-weight: 500;
+			border-color: #fff;
+			color: #333;
+			background-color: #fff;
+		}
+		&.visited {
+			opacity: 0.8;
+			background-color: rgba(0, 0, 0, 0.6);
+		}
+	}
+}
